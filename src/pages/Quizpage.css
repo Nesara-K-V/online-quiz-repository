@@ -1,0 +1,76 @@
+.container-quizpage {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 1000px;
+    min-height: 350px;
+    margin: 0 auto;
+  }
+  
+.heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+.question {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+.answer-container {
+    margin-top: 20px;
+  }
+  
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+}
+  
+.contained-button {
+    background-color: #0056b3;
+    
+    color: #fff;
+    border: none;
+}
+.contained-button:hover{
+    background-color: #007bff;
+}
+  
+.score {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .spinner-container {
+    margin-top: 80px; /* Equivalent to mt={20} in MUI, adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+  

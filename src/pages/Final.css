@@ -1,0 +1,25 @@
+/* FinalScreen.css */
+
+.final-screen {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .final-score {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .back-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4caf50; /* Optional: Add styling for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #45a049; /* Optional: Add hover effect */
+  }
+  
