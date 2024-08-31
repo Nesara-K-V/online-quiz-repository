@@ -9,7 +9,7 @@ import Final from './pages/Final';
 function App() {
   return (
     <div className="App">
-      <Router basename='/Online-quiz-repository'>
+      <Router>
         
         <Routes>
           <Route path='/' element={<HomePage/>}/>
