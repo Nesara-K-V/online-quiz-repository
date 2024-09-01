@@ -1,53 +1,78 @@
 .container {
     padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 12px; /* Increased the border-radius for a softer look */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
     text-align: center;
-    max-width: 400px;
+    min-width: 500px;
     margin: 0 auto;
-  }
-  
-  .heading {
-    font-size: 24px;
+    transition: transform 0.3s ease-in-out; /* Added transition for smooth interactions */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.heading {
+    font-size: 26px; /* Slightly larger for better emphasis */
+    
     margin-bottom: 20px;
-  }
-  
-  .question {
+    color: #333; /* Darker color for contrast */
+    letter-spacing: 1px; /* Improved letter spacing */
+    text-transform: uppercase; /* Make the heading uppercase for emphasis */
+}
+
+.question {
     margin-top: 20px;
-    font-size: 18px;
-  }
-  
-  .answer-container {
+    font-size: 20px;
+    color: #555; /* Softer color */
+}
+
+.answer-container {
     margin-top: 20px;
-  }
-  
-  .button {
+}
+
+.button {
     padding: 10px 20px;
     font-size: 16px;
     border: 2px solid #007bff;
     border-radius: 4px;
     background-color: transparent;
-    color: #007bff;
+    background-color: #0056b3;
     cursor: pointer;
-  }
-  
-  .contained-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
     background-color: #007bff;
     color: #fff;
+}
+
+.contained-button {
+    background-color: #0056b3;
+
+    color: #fff;
     border: none;
-  }
-  
-  .score {
+     /* Added shadow for the contained button */
+}
+
+.contained-button:hover {
+    background-color: #007bff;
+ /* Darker shade on hover */
+}
+
+.score {
     margin-top: 40px;
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger font */
     font-weight: bold;
-  }
-  
+    color: #333;
+    letter-spacing: 0.5px; /* Slightly spaced out letters */
+}
+
 .dropdown {
     width: 100%;
     margin: 20px 0;
     position: relative;
-     /* Ensure dropdown button is above container */
 }
 
 .dropdown-btn {
@@ -61,43 +86,56 @@
     justify-content: space-between;
     cursor: pointer;
     position: relative;
-    z-index: 9; /* Ensure the dropdown button is above other elements */
+    z-index: 9;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
 }
 
 .dropdown-content {
     position: absolute;
-    top: 100%; /* Position below the button */
+    top: 100%;
     left: 0;
     padding: 10px;
     background: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 150%;
-    z-index: 10; /* Higher z-index to appear above everything else */
-    display: block; /* Ensure it's visible when active */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 10;
     max-height: 200px;
     overflow-y: auto;
-    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth dropdown visibility */
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
 }
 
 .dropdown-content .dropdown-item {
     padding: 10px;
     cursor: pointer;
     transition: background 0.2s ease;
+    border-radius: 4px; /* Added slight rounding */
 }
 
 .dropdown-content .dropdown-item:hover {
-    background-color: #f1f1f1;
+    background-color: #e0e0e0; /* Softer hover effect */
 }
 
 .input-group {
     margin-bottom: 20px;
-    text-align: left; /* Align label and input to the left */
+    text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555; /* Softer color */
 }
 
 .input-group input {
@@ -105,9 +143,16 @@
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
     font-size: large;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.input-group input:focus {
+    border-color: #007bff; /* Border color on focus */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+}
+
 .submit-btn {
     padding: 15px 20px;
     background-color: #007bff;
@@ -118,16 +163,48 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3); /* Added shadow */
 }
 
 .submit-btn:hover {
     background-color: #0056b3;
 }
+
 .error-message {
-    font-size: 1.25rem; /* Equivalent to variant="h6" */
+    font-size: 1.25rem;
     color: red;
-    margin-top: 20px; /* Equivalent to mt={20} */
-    text-align: center; /* Center the text if needed */
+    margin-top: 20px;
+    text-align: center;
+    animation: shake 0.3s ease; /* Shake animation on error */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.spinner-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    width: 40px; /* Slightly larger spinner */
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Responsive styles */
@@ -144,10 +221,7 @@
 
     .dropdown-content {
         width: 90%;
-        display: block; /* Ensure it's visible when active */
         max-height: 150px;
-        overflow-y: auto;
-        
     }
 
     .dropdown-content .dropdown-item {
@@ -168,15 +242,12 @@
 @media (max-width: 480px) {
     .container {
         padding: 20px 15px;
-        max-width: 100%;
-        
+        min-width: 300px;
     }
+
     .dropdown-content {
         width: 90%;
-        display: block; /* Ensure it's visible when active */
         max-height: 130px;
-        overflow-y: auto;
-        
     }
 
     .dropdown-btn {
@@ -197,29 +268,3 @@
         font-size: 14px;
     }
 }
-
-.spinner-container {
-    margin-top: 80px; /* Equivalent to mt={20} in MUI, adjust as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spinner {
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border-left-color: #09f;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-

@@ -98,14 +98,15 @@ const Quizpage = () => {
   return (
     <div className="container-quizpage">
       <h4 className="heading">Question {questionIndex + 1}</h4>
-      <p className="question">{decode(response.results[questionIndex].question)}</p>
-      <div className="timer">Time Remaining: {timer} seconds</div> {/* Display the timer */}
+      <p className="question">{decode(response.results[questionIndex].question)} </p>
       {options.map((data, id) => (
         <div className="answer-container" key={id}>
           <button className="button contained-button" onClick={handleClickAnswer}>{decode(data)}</button>
         </div>
       ))}
-      <div className="score">Score: {score} / {response.results.length}</div>
+
+      <div className="score">Score: {score} / {response.results.length} &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time Remaining: {timer} s</div>
     </div>
   );
 };

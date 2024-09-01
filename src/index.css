@@ -12,7 +12,10 @@ body {
   height: 100vh;
   background-color: #f0f2f5; /* Light background color */
   font-family: Arial, sans-serif;
-  
+  background-image: url('./assets/dark_blue.jpg');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
 }
 
 code {
