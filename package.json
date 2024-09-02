@@ -59,6 +59,5 @@
     "react-app-rewired": "^2.2.1",
     "webpack": "^5.94.0",
     "webpack-dev-server": "^5.0.4"
-  },
-  "homepage": "http://localhost:3000/Nesara-K-V/Online-quiz-repository"
+  }
 }
