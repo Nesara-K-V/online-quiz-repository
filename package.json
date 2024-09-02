@@ -27,11 +27,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build ",
+    "build": "react-scripts build && npm run create-html ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build "
+    "create-html": "node createHtmlFile.js",
+    "deploy": "gh-pages -d build && npm run build && npm run create-html"
   },
   "eslintConfig": {
     "extends": [
@@ -60,5 +61,5 @@
     "webpack": "^5.94.0",
     "webpack-dev-server": "^5.0.4"
   },
-  "homepage": "http://localhost:3000/Nesara-K-V/Online-quiz-repository"
+  "homepage": "https://github.com/Nesara-K-V/online-quiz-repository/"
 }
