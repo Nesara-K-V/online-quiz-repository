@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Nesara-K-V/Online-quiz-repository/static/css/main.7669f39c.css",
+    "main.js": "/Nesara-K-V/Online-quiz-repository/static/js/main.5e62f728.js",
+    "static/js/919.08774bcd.chunk.js": "/Nesara-K-V/Online-quiz-repository/static/js/919.08774bcd.chunk.js",
+    "static/media/dark_blue.jpg": "/Nesara-K-V/Online-quiz-repository/static/media/dark_blue.903d4d41b64e6c0217b8.jpg",
+    "index.html": "/Nesara-K-V/Online-quiz-repository/index.html",
+    "main.7669f39c.css.map": "/Nesara-K-V/Online-quiz-repository/static/css/main.7669f39c.css.map",
+    "main.5e62f728.js.map": "/Nesara-K-V/Online-quiz-repository/static/js/main.5e62f728.js.map",
+    "919.08774bcd.chunk.js.map": "/Nesara-K-V/Online-quiz-repository/static/js/919.08774bcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7669f39c.css",
+    "static/js/main.5e62f728.js"
+  ]
+}
